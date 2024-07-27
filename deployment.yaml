@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vat-calc-deployment
+spec:
+  replicas: 6  # Number of desired replicas
+  selector:
+    matchLabels:
+      app: vat-calc
+  template:
+    metadata:
+      labels:
+        app: vat-calc
+    spec:
+      containers:
+      - name: vat-calc
+        image: yash5090/vat-calc:latest
+        ports:
+        - containerPort: 5000
