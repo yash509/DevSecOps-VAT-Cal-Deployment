@@ -27,7 +27,7 @@ pipeline {
         
         stage('Checkout from Git') {                        
             steps {                                       
-                git branch: 'main', url: ''
+                git branch: 'main', url: 'https://github.com/yash509/DevSecOps-VAT-Cal-Deployment.git'
             }
         }
         
